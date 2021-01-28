@@ -9,7 +9,7 @@ Aquest repositori és una evolució del repositori [mvc_pdo I](https://github.co
 
 Com s'aprecia a la imatge, el que s'ha fet ha estat copiar tota l'estructura d'un CRUD per fer l'altre. No tenen més relació que un enllaç en la vista principal, i que, evidentment, utilitzen la mateixa BD.
 
-Per aconseguir que quan insertem un alumne apareguin tots els enseyaments per ser escollits (el no, no només la id de l'ensenyament), s'ha fet una LEFT JOIN:
+Per aconseguir que quan insertem un alumne apareguin tots els enseyaments per ser escollits (el nom, no només la id de l'ensenyament), s'ha fet una LEFT JOIN:
 
 ```
 SELECT Alumnes.*, Ensenyaments.Nom AS ensenyament_nom FROM Alumnes LEFT JOIN Ensenyaments ON Alumnes.ensenyament_id = Ensenyaments.id  ORDER BY Alumnes.id ASC 
